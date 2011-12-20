@@ -50,7 +50,7 @@ READ id value;
 @end
 
 // The Either type represents a value of one of two possible types (a disjoint union).
-// The data constructors; Left and Right represent the two possible values. The Either type is often used as an alternative to Option where Left 
+// The data constructors; Left and Right represent the two possible values. The Either type is often used as an alternative to Option where Left
 // represents failure (by convention) and Right is akin to Some.
 @interface FKEither : NSObject {
     id value;
@@ -81,7 +81,7 @@ READ FKRightProjection *right;
 // NSString *itSucks = [maybeFailed.left.value localizedDescription];
 + (FKEither *)errorWithReason:(NSString *)reason description:(NSString *)description;
 
-// Construct an NSError on the left using |reason| as the NSLocalizedFailureReasonErrorKey and |error| as the NSUnderlyingErrorKey of the error's 
+// Construct an NSError on the left using |reason| as the NSLocalizedFailureReasonErrorKey and |error| as the NSUnderlyingErrorKey of the error's
 // userInfo dictionary.
 + (FKEither *)errorWithReason:(NSString *)reason underlyingError:(NSError *)error;
 

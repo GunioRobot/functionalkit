@@ -4,7 +4,7 @@ require 'fileutils'
 def make_p n, out_dir
   varnames = ('_1'..'_9').to_a[0,n] # needed for template.
   write = proc { |ext, n|
-    File.open("#{out_dir}/FKP#{n}.#{ext}", 'w') do |f| 
+    File.open("#{out_dir}/FKP#{n}.#{ext}", 'w') do |f|
       f.puts ERB.new(IO.read("#{File.dirname(__FILE__)}/Templates/FKPx.#{ext}.erb")).result(binding)
     end
   }

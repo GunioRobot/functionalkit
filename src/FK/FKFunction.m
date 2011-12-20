@@ -297,7 +297,7 @@ READ NSObject *target;
 }
 
 + (FKFunction *)functionFromInvocation:(NSInvocation *)invocation parameterIndex:(NSUInteger)index {
-	return [[[FKFunctionFromInvocation alloc] initWithInvocation:invocation parameterIndex:index] autorelease];	
+	return [[[FKFunctionFromInvocation alloc] initWithInvocation:invocation parameterIndex:index] autorelease];
 }
 
 - (id):(id)arg {
@@ -325,7 +325,7 @@ READ NSObject *target;
 
 - (id):(id)arg1 :(id)arg2 {
     @throw [NSException exceptionWithName:@"InvalidOperation" reason:@"Must override -(id):(id):(id) in FKFunction2" userInfo:nil];
-}    
+}
 
 @end
 

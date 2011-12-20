@@ -1,11 +1,11 @@
 #import "FKP<%= n %>.h"
 #import <objc/runtime.h>
-<% 
+<%
 macro_names = ('a'..'z').to_a[0,n]
-macro_bit = (1..n).to_a.map { |i| "_#{i}:#{macro_names[i-1]}" }.join(' ') 
-call_init_bit = (1..n).to_a.map { |i| "_#{i}:#{varnames[i-1]}" }.join(' ') 
-selector_bit = (1..n).to_a.map { |i| "_#{i}:(id)#{varnames[i-1]}" }.join(' ') 
-init_bit = (1..n).to_a.map { |i| "_#{i}:(id)new#{varnames[i-1]}" }.join(' ') 
+macro_bit = (1..n).to_a.map { |i| "_#{i}:#{macro_names[i-1]}" }.join(' ')
+call_init_bit = (1..n).to_a.map { |i| "_#{i}:#{varnames[i-1]}" }.join(' ')
+selector_bit = (1..n).to_a.map { |i| "_#{i}:(id)#{varnames[i-1]}" }.join(' ')
+init_bit = (1..n).to_a.map { |i| "_#{i}:(id)new#{varnames[i-1]}" }.join(' ')
 cls = "FKP#{n}"
 %>
 @implementation <%= cls %>

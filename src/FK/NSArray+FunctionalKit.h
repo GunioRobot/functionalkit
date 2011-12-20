@@ -24,7 +24,7 @@ READ id head;
 // The array without the first element or fails for the empty array.
 READ NSArray *tail;
 
-// Returns a tuple where the first element is an array containing the longest prefix of this array that satisfies the given predicate and the second 
+// Returns a tuple where the first element is an array containing the longest prefix of this array that satisfies the given predicate and the second
 // element is the remainder of the array (i.e. those items that don't match).
 // f :: id -> BOOL
 - (FKP2 *)span:(id <FKFunction>)f;
@@ -47,8 +47,8 @@ READ NSArray *tail;
 - (NSDictionary *)groupByKey:(id <FKFunction>)f;
 
 // Folds across this array using |acc| as the start acumulator (of type a), a function given a & b that returns an a, in constant stack.
-// It takes the second argument and the first item of the list and applies the function to them, then feeds the function with this result and the 
-// second argument and so on. 
+// It takes the second argument and the first item of the list and applies the function to them, then feeds the function with this result and the
+// second argument and so on.
 // foldLeft :: a -> (a -> b -> a) -> a
 - (id)foldLeft:(id)acc f:(id <FKFunction2>)f;
 
@@ -69,7 +69,7 @@ READ NSArray *tail;
 // Reverses this array.
 - (NSArray *)reverse;
 
-// Returns the unique items in this array, according to the |isEqual:| selector. Items in the returned array may not be in the same order as this 
+// Returns the unique items in this array, according to the |isEqual:| selector. Items in the returned array may not be in the same order as this
 // array.
 - (NSArray *)unique;
 

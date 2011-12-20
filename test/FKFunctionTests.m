@@ -42,7 +42,7 @@
 	TestEffect *e = [[[TestEffect alloc] init] autorelease];
 	id <FKFunction> f = [FKFunction functionFromSelector:@selector(description)];
 	id <FKEffect> comapped = [FKEffect comap:e:f];
-	[comapped e:object];	
+	[comapped e:object];
 	STAssertEqualObjects([object description], [e arg], nil);
 }
 
@@ -89,7 +89,7 @@
 	FKFunction *a = [FKFunction functionFromSelector:@selector(a:) target:self];
 	FKFunction *b = [FKFunction functionFromSelector:@selector(b:) target:self];
 	FKFunction *andThen = [a andThen:b];
-	STAssertEqualObjects(@"ab", [andThen :@""], nil);	
+	STAssertEqualObjects(@"ab", [andThen :@""], nil);
 }
 
 id myFunc(id arg) {

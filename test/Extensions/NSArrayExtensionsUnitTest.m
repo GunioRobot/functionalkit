@@ -45,12 +45,12 @@
 }
 
 - (void)testCanMapAFunctionAcrossAnArray {
-	STAssertEqualObjects([NSARRAY(@"test") map:functionS(uppercaseString)], NSARRAY(@"TEST"), nil); 
+	STAssertEqualObjects([NSARRAY(@"test") map:functionS(uppercaseString)], NSARRAY(@"TEST"), nil);
 }
 
 - (void)testCanCreateANewArrayByConcatenatingAnotherOne {
     NSArray *source = NSARRAY(NSARRAY(@"1", @"2"), NSARRAY(@"3", @"4"));
-    STAssertEqualObjects(NSARRAY(@"1", @"2", @"3", @"4"), [NSArray concat:source], nil);     
+    STAssertEqualObjects(NSARRAY(@"1", @"2", @"3", @"4"), [NSArray concat:source], nil);
 }
 
 - (void)testConcatFailsOnNonArray {

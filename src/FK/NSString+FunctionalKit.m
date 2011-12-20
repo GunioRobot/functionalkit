@@ -7,7 +7,7 @@ NSString *concatF(NSString *base, NSString *suffix) {
     [mutable appendString:base];
     [mutable appendString:suffix];
     return mutable;
-} 
+}
 
 + (FKFunction2 *)concatF {
     return functionP2(concatF);

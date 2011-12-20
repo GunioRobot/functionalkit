@@ -5,11 +5,11 @@
 
  Your.h => NewTypeInterface(MyNewType, NSString, fieldName);
  Your.m => NewTypeImplementation(MyNewType, NSString, fieldName);
- 
+
  Later...
  MyNewType *instance = [MyNewType fieldName:@"foobar"];
  [instance fieldName]; // @foobar
- 
+
  */
 
 #import "FKFunction.h"

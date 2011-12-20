@@ -141,7 +141,7 @@ READ id <FKFunction> wrappedF;
             [grouped setObject:values forKey:nilsafeKey];
         }
         [values addObject:item];
-	}   
+	}
     return [NSDictionary dictionaryWithDictionary:grouped];
 }
 
@@ -183,7 +183,7 @@ READ id <FKFunction> wrappedF;
     for (int i = 0; i < [self count]; i++) {
         [interspersed addObject:[self objectAtIndex:i]];
         if (i != [self count] - 1) [interspersed addObject:object];
-    }    
+    }
     return interspersed;
 }
 

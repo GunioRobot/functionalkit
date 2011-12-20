@@ -22,7 +22,7 @@
         f = [fu retain];
         argument = [a retain];
     }
-    
+
     return self;
 }
 

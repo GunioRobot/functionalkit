@@ -108,7 +108,7 @@
 	FKEither *either = [FKEither rightWithValue:[NSNumber numberWithInt:54]];
 	FKEither *mapped = [either.right map:functionS(description)];
 	STAssertTrue(mapped.isRight,nil);
-	STAssertEqualObjects(mapped.right.value, @"54",nil);	
+	STAssertEqualObjects(mapped.right.value, @"54",nil);
 }
 
 - (void)testMappingAcrossTheLeftOfARightIsIdentity {
@@ -145,7 +145,7 @@
     FKEither *fullRight = [FKEither rightWithValue:[FKEither rightWithValue:@"right"]];
     FKEither *firstLeft = [FKEither leftWithValue:@"left"];
     FKEither *secondLeft = [FKEither rightWithValue:[FKEither leftWithValue:@"left"]];
-    
+
     STAssertEqualObjects([FKEither joinRight:fullRight], [FKEither rightWithValue:@"right"], nil);
     STAssertEqualObjects([FKEither joinRight:firstLeft], [FKEither leftWithValue:@"left"], nil);
     STAssertEqualObjects([FKEither joinRight:secondLeft], [FKEither leftWithValue:@"left"], nil);

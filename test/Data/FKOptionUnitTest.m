@@ -37,7 +37,7 @@
 	STAssertTrue([[[FKOption none] map:functionS(description)] isNone], nil);
 	NSString *description = [object description];
 	FKOption *r = [[FKOption some:object] map:functionS(description)];
-	STAssertTrue([r isSome], nil);	
+	STAssertTrue([r isSome], nil);
 	STAssertEqualObjects([r some], description, nil);
 }
 
@@ -79,11 +79,11 @@
 - (void)testFilter {
     FKOption *o1 = [FKOption some:[NSNumber numberWithInt:5]];
     FKOption *o2 = [FKOption some:@"Okay"];
-    
+
     STAssertTrue([[[FKOption none] filter:functionTS(self, isString:)] isNone], nil);
     STAssertTrue([[o1 filter:functionTS(self, isString:)] isNone], nil);
     STAssertTrue([[o2 filter:functionTS(self, isString:)] isSome], nil);
-    
+
 }
 
 - (FKOption *)givesANone:(NSString *)str {

@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "FKMacros.h"
-<% 
+<%
 macro_names = ('a'..'z').to_a[0,n]
-macro_bit = (1..n).to_a.map { |i| "_#{i}:#{macro_names[i-1]}" }.join(' ') 
-selector_bit = (1..n).to_a.map { |i| "_#{i}:(id)#{varnames[i-1]}" }.join(' ') 
-init_bit = (1..n).to_a.map { |i| "_#{i}:(id)new#{varnames[i-1]}" }.join(' ') 
+macro_bit = (1..n).to_a.map { |i| "_#{i}:#{macro_names[i-1]}" }.join(' ')
+selector_bit = (1..n).to_a.map { |i| "_#{i}:(id)#{varnames[i-1]}" }.join(' ')
+init_bit = (1..n).to_a.map { |i| "_#{i}:(id)new#{varnames[i-1]}" }.join(' ')
 %>
 #define p<%= n %>(<%= macro_names.join(', ') %>)    pair<%= n %>(<%= macro_names.join(', ') %>)
 #define pair<%= n %>(<%= macro_names.join(', ') %>) [FKP<%= n %> p<%= n %>With<%= macro_bit %>]

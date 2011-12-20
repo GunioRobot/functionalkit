@@ -1,6 +1,6 @@
 # FunctionalKit: It's Functional for Objective-C.
 
-FunctionalKit is an attempt to use functional paradigms in Objective-C. It is a set of low level 
+FunctionalKit is an attempt to use functional paradigms in Objective-C. It is a set of low level
 functional types & APIs. It contains types such as either, option, etc. that allow your to write
 correct, clean, tight, succinct and (where possible) typesafe code. It also provides more advanced
 concepts such as lifting functions into monads.
@@ -122,7 +122,7 @@ The following example lifts a function into the array monad, applying the functi
 
     // Retrieve the array of photos.
 	FKOption *maybePhotos = [FKOption fromNil:[dictionary objectForKey:@"photos"] ofType:[NSArray class]];
-    
+
     // Still within the option monad, lift the parse function (above) into the array monad and map across the option.
     id <FKFunction> parsePhotoF = [FKFunction functionFromSelector:@selector(parsePhotoForDictionary:) target:self];
     FKOption *maybeParsedPhotos = [maybePhotos map:[NSArray liftFunction:parsePhotoF]];
